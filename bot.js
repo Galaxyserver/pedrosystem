@@ -2111,6 +2111,10 @@ client.on("message", message => {
     }
 });
 
+client.on('guildMemberAdd',async m => {
+m.addRole(m.guild.roles.find(r => r.name === "-Pedro Army"));
+});
+
 client.on('ready', ready => {
 client.user.setGame(`-help|PedroFriends`,`https://twitch.tv/ichbinxirdx`)
 });
